@@ -15,8 +15,10 @@ async function run() {
     res.forEach((element) => {
       console.log(element["name"] + " - " + element["age"]);
     });
+  } catch (error) {
+    console.log(error);
   } finally {
     client.close();
   }
 }
-run().catch(console.dir);
+run();
