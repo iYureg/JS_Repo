@@ -16,6 +16,11 @@ try {
   fltrRes.forEach((el) => {
     console.log(el["name"] + " - " + el["age"] + " - " + el["salary"]);
   });
+
+  let prodsColl = client.db("test").collection("prods");
+  let findOneRes = await prodsColl.findOne({ cost: 300 }); // вернет первый документ с ценой 300
+  // без фильтра метод findOne вернет первый документ в коллекции
+  console.log(findOneRes["name"] + " - " + findOneRes["cost"]);
 } catch (error) {
   console.log(error);
 } finally {
