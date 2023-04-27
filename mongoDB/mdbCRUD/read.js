@@ -31,6 +31,14 @@ try {
 
   let countWithFilter = await prodsColl.count({ cost: 500 }); // кол-во документов по фильтру
   console.log(countWithFilter, " <- количество продуктов с ценой 500");
+
+  // ---------- method project ----------
+  let proj1 = await prodsColl.find().project({ name: 1, cost: 1 }).toArray();
+
+  // поле _id нужно явно исключать из проекции
+  let proj2 = await prodsColl.find().project({ _id: 0 }).toArray();
+  //   console.log(proj1);
+  //   console.log(proj2);
 } catch (error) {
   console.log(error);
 } finally {
