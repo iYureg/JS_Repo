@@ -39,6 +39,10 @@ try {
   let proj2 = await prodsColl.find().project({ _id: 0 }).toArray();
   //   console.log(proj1);
   //   console.log(proj2);
+
+  // ---------- method distinct ----------
+  let costsSet = await prodsColl.distinct("cost");
+  console.log(costsSet); // массив уникальных значений из поля cost
 } catch (error) {
   console.log(error);
 } finally {
