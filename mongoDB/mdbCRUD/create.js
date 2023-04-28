@@ -1,4 +1,5 @@
 import { MongoClient } from "mongodb";
+import prds from "../mdbBegining/data/insert.js";
 
 const uri = "mongodb://localhost:27017";
 
@@ -12,6 +13,9 @@ try {
 
   // ------- method insertOne -------
   //   await prodsColl.insertOne({ name: "test", cost: 300, rest: 30 });
+
+  // --------- method insertMany ---------
+  //await prodsColl.insertMany(prds);
 
   let res = await prodsColl.find().toArray();
   console.log(res);
