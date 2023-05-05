@@ -40,6 +40,33 @@ try {
   engUser.forEach((el) => {
     console.log(el["name"] + " - " + el["langs"]);
   });
+
+  // --- collection clothes ---
+  let clothes = client.db("test").collection("clothes");
+
+  // --- method $all ---
+  console.log("--- collection clothes / $all ---");
+  let allBlack = { colors: { $all: ["black"] } };
+  let result = await clothes.find(allBlack).toArray();
+  result.forEach((el) => {
+    console.log(el["name"] + " - " + el["colors"]);
+  });
+
+  // --- method $size ---
+  console.log("--- collection clothes / $size ---");
+  let sizeCond = { colors: { $size: 3 } };
+  let sizeRes = await clothes.find(sizeCond).toArray();
+  sizeRes.forEach((el) => {
+    console.log(el["name"] + " - " + el["colors"]);
+  });
+
+  // --- method $elemMatch ---
+  console.log("--- collection clothes / $elemMatch ---");
+  let sizeElemMatch = { sizes: { $elemMatch: { $gt: 3, $lt: 5 } } };
+  let elemMatchRes = await clothes.find(sizeElemMatch).toArray();
+  elemMatchRes.forEach((el) => {
+    console.log(el["name"] + " - " + el["sizes"]);
+  });
 } catch (error) {
   console.log(error);
 } finally {
