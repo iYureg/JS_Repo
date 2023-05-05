@@ -30,6 +30,16 @@ try {
   empsFromBrit.forEach((el) => {
     console.log(el["employee"].name + " - " + el["employee"].addr.city);
   });
+
+  // --- collection employees ---
+  let usersLang = client.db("test").collection("usersLanguages");
+
+  console.log("--- collection usersLanguages ---");
+  let cond3 = { langs: "english" };
+  let engUser = await usersLang.find(cond3).toArray();
+  engUser.forEach((el) => {
+    console.log(el["name"] + " - " + el["langs"]);
+  });
 } catch (error) {
   console.log(error);
 } finally {
