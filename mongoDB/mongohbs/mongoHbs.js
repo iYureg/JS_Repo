@@ -68,6 +68,16 @@ app.get("/prods", async function (req, res) {
   let prods = await client.db("test").collection("prods").find().toArray();
   res.render("prods", { prods: prods });
 });
+
+// --- delete prod ---
+app.get("/prod/delete/:name", async (req, res) => {
+  let name = req.params.name;
+  let prod = await client
+    .db("test")
+    .collection("prods")
+    .deleteOne({ name: name });
+  res.render("message", { data: "successfully deleted" });
+});
 app.use((req, res) =>
   res.status(404).render("404", { data: "page not found" })
 );
