@@ -41,6 +41,28 @@ app.get("/user/show/:name", async function (req, res) {
     : res.render("user", { user: user });
 });
 
+// --- users.hbs collection users
+app.get("/users", async function (req, res) {
+  let users = await client.db("test").collection("users").find().toArray();
+  res.render("users", { users: users });
+});
+
+app.get("/prod/show/:name", async function (req, res) {
+  /*
+    http://localhost:3000/prod/show/prod1
+                                    prod2
+                                    prod3
+ */
+  let name = req.params.name;
+  let prod = await client
+    .db("test")
+    .collection("prods")
+    .findOne({ name: name });
+
+  !prod
+    ? res.render("404", { data: "not found" })
+    : res.render("prod", { prod: prod });
+});
 // --- prods.hbs collection prods ---
 app.get("/prods", async function (req, res) {
   let prods = await client.db("test").collection("prods").find().toArray();
