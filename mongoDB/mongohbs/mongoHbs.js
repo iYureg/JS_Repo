@@ -36,17 +36,17 @@ app.get("/user/show/:name", async function (req, res) {
     .collection("users")
     .findOne({ name: name });
 
-  if (user == null) {
-    let error = "not found";
-    res.render("404", { data: error });
-  } else {
-    res.render("user", {
-      name: user.name,
-      age: user.age,
-      salary: user.salary,
-    });
-  }
+  !user
+    ? res.render("404", { data: "not found" })
+    : res.render("user", { user: user });
 });
 
-app.use((req, res) => res.status(404).render("404"));
+// --- prods.hbs collection prods ---
+app.get("/prods", async function (req, res) {
+  let prods = await client.db("test").collection("prods").find().toArray();
+  res.render("prods", { prods: prods });
+});
+app.use((req, res) =>
+  res.status(404).render("404", { data: "page not found" })
+);
 app.listen(3000, () => console.log("localhost:3000 running..."));
