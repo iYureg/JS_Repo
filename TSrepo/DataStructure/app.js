@@ -36,3 +36,17 @@ var user = {
     city: { name: "london" }
 };
 console.log("Name: " + user.name + "- Age: " + user.age + " - City: " + user.city.name);
+// Массивы объектов в TypeScript
+console.log("---------- Массив объектов с юзерами ---------");
+var users = [];
+users.push({ name: "john", age: 33, city: { name: "london" } });
+users.push({ name: "eric", age: 22, city: { name: "manchester" } });
+console.log(users);
+// users.forEach((el) => {
+//   console.log(el["name"], " - ", el["city"].name);
+// });
+console.log("---------- Массив объектов с датами ---------");
+var arr = [];
+arr.push(new Date(2030, 11, 31));
+arr.push(new Date(2020, 11, 31));
+console.log(arr);
