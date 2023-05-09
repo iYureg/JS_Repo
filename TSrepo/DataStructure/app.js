@@ -23,6 +23,12 @@ var employee = {
 console.log("---------- объект employee через интерфейс Employee ---------");
 console.log(employee.name, " - ", employee.position.name, " - ", employee.position.salary, " - ", employee.addr.city, " - ", employee.addr.country);
 // Объекты в объектаъ в TypeScript
+console.log("---------- объект Date внутри объекта Period ---------");
+var period = {
+    date1: new Date(2030, 11, 31),
+    date2: new Date(2020, 11, 31)
+};
+console.log(period);
 console.log("---------- объект City внутри объекта User ---------");
 var user = {
     name: "john",

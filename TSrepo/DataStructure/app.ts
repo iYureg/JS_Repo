@@ -62,8 +62,18 @@ console.log(
 );
 
 // Объекты в объектаъ в TypeScript
-console.log("---------- объект City внутри объекта User ---------");
+console.log("---------- объект Date внутри объекта Period ---------");
+interface Period {
+  date1: Date;
+  date2: Date;
+}
+let period: Period = {
+  date1: new Date(2030, 11, 31),
+  date2: new Date(2020, 11, 31),
+};
+console.log(period);
 
+console.log("---------- объект City внутри объекта User ---------");
 interface City {
   name: string;
 }
