@@ -108,6 +108,34 @@ app.get("/prod/delete/:name", async (req, res) => {
   res.render("message", { data: "prod successfully deleted" });
 });
 
+// --- update document ---
+app.get("/prod/edit/:name", async (req, res) => {
+  /* 
+  получаем документ и отправляем в представление
+ */
+  let name = req.params.name;
+  let prod = await client
+    .db("test")
+    .collection("prods")
+    .findOne({ name: name });
+  res.render("edit", { prod: prod });
+});
+
+app.post("/prod/edit/:name", async (req, res) => {
+  let user = req.body;
+  await client
+    .db("test")
+    .collection("prods")
+    .updateOne({ name: user.name }, { $set: user });
+
+  /**
+   * после отправки формы обновляем коллекцию
+   * и выводим представление коллекции с обновленными данными
+   */
+  res.render("prods", {
+    prods: await client.db("test").collection("prods").find().toArray(),
+  });
+});
 app.use((req, res) =>
   res.status(404).render("404", { data: "page not found" })
 );
