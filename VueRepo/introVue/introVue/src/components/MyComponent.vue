@@ -3,9 +3,9 @@ export default {
   data() {
     return {
       aAttr: {
-        yaHref: "www.yandex.ru",
+        yaHref: "https://www.ya.ru",
         yaText: "Яндекс",
-        gooHref: "www.google.com",
+        gooHref: "https://www.google.com",
         gooText: "Google",
       },
       name: "ivan",
