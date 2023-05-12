@@ -5,4 +5,5 @@
 - JavaScript base, JavaScript prime
 - nodeJS, express, handlebars, mongodb
 - TypeScript
+- Vue
 - React
