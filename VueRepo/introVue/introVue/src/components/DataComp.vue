@@ -4,6 +4,7 @@ export default {
     return {
       nums: [1, 2, 3, 4, 5],
       strings: ["q", "w", "e", "r", "t", "y"],
+      obj: { name: "Иван", surn: "Иванов", patronamic: "Иванович" },
     };
   },
   name: "Data",
@@ -26,6 +27,7 @@ export default {
       sum of strings:
       {{ strings.join("") }}
     </p>
+    <p>obj: {{ obj.surn }} {{ obj["name"] }} {{ obj.patronamic }}</p>
   </div>
 </template>
 

@@ -21,8 +21,6 @@ import MathComp from "./components/MathComp.vue";
   </header>
 
   <main>
-    <MyComponent />
-    <MathComp />
     <DataComp />
   </main>
 </template>
