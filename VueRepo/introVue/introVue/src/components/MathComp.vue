@@ -13,6 +13,8 @@ export default {
 </script>
 <template>
   <div class="math">
+    <h3>----- Компонете MathComp -----</h3>
+    <br />
     {{ var1 }}<span class="red"> + </span> {{ var2 }} = {{ var1 + var2 }}
     <br />
     {{ var1 }}<span class="red"> - </span> {{ var2 }} = {{ var1 - var2 }}

@@ -17,7 +17,9 @@ export default {
 };
 </script>
 <template>
+  <h3>----- Компонете MyComponent -----</h3>
   <div class="link">
+    <br />
     <div>
       <a :href="aAttr.yaHref">{{ aAttr.yaText }}</a>
     </div>
@@ -29,6 +31,9 @@ export default {
   <div class="content">{{ surn }}</div>
 </template>
 <style>
+h3 {
+  text-align: center;
+}
 .link {
   display: flex;
   flex-direction: row;
