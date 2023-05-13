@@ -17,7 +17,7 @@ export default {
 };
 </script>
 <template>
-  <h3>----- Компонете MyComponent -----</h3>
+  <h3>----- Компонент MyComponent -----</h3>
   <div class="link">
     <br />
     <div>
