@@ -3,6 +3,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 import DataComp from "./components/DataComp.vue";
 import MyComponent from "./components/MyComponent.vue";
 import MathComp from "./components/MathComp.vue";
+import HelloMethods from "./components/HelloMethods.vue";
 </script>
 
 <template>
@@ -21,7 +22,7 @@ import MathComp from "./components/MathComp.vue";
   </header>
 
   <main>
-    <DataComp />
+    <HelloMethods />
   </main>
 </template>
 
