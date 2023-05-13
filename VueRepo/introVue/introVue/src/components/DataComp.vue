@@ -2,7 +2,8 @@
 export default {
   data() {
     return {
-      arr: [1, 2, 3, 4, 5],
+      nums: [1, 2, 3, 4, 5],
+      strings: ["q", "w", "e", "r", "t", "y"],
     };
   },
   name: "Data",
@@ -11,9 +12,20 @@ export default {
 <template>
   <div class="data">
     ---- Компонент DataComp ----
-    <p>arr[0]: {{ arr[0] }}</p>
-    <p>arr[0]: {{ arr[1] }}</p>
-    <p>arr[0]: {{ arr[2] }}</p>
+    <p>nums[0]: {{ nums[0] }}</p>
+    <p>nums[0]: {{ nums[1] }}</p>
+    <p>nums[0]: {{ nums[2] }}</p>
+    <p>sum of nums: {{ nums[0] + nums[1] + nums[2] }}</p>
+    <p>strings[0]: {{ strings[0] }}</p>
+    <p>strings[0]: {{ strings[1] }}</p>
+    <p>strings[0]: {{ strings[2] }}</p>
+    <p>strings[0]: {{ strings[3] }}</p>
+    <p>strings[0]: {{ strings[4] }}</p>
+    <p>strings[0]: {{ strings[5] }}</p>
+    <p>
+      sum of strings:
+      {{ strings.join("") }}
+    </p>
   </div>
 </template>
 
