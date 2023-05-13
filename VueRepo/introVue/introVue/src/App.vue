@@ -1,6 +1,7 @@
 <script setup>
 import HelloWorld from "./components/HelloWorld.vue";
 import MyComponent from "./components/MyComponent.vue";
+import MathComp from "./components/MathComp.vue";
 import TheWelcome from "./components/TheWelcome.vue";
 </script>
 
@@ -17,6 +18,7 @@ import TheWelcome from "./components/TheWelcome.vue";
     <div class="wrapper">
       <HelloWorld msg="Введение в Vue" />
       <MyComponent />
+      <MathComp />
     </div>
   </header>
 
