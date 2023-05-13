@@ -1,8 +1,6 @@
 <script setup>
 import HelloWorld from "./components/HelloWorld.vue";
 import DataComp from "./components/DataComp.vue";
-import TheWelcome from "./components/TheWelcome.vue";
-import Data from "./components/DataComp.vue";
 import MyComponent from "./components/MyComponent.vue";
 import MathComp from "./components/MathComp.vue";
 </script>
@@ -19,14 +17,13 @@ import MathComp from "./components/MathComp.vue";
 
     <div class="wrapper">
       <HelloWorld msg="Введение в Vue" />
-      <MyComponent />
-      <MathComp />
-      <DataComp />
     </div>
   </header>
 
   <main>
-    <TheWelcome />
+    <MyComponent />
+    <MathComp />
+    <DataComp />
   </main>
 </template>
 
