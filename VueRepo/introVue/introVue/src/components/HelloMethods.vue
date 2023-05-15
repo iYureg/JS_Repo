@@ -3,9 +3,18 @@ export default {
   data() {
     return {
       date: new Date(),
+      name: "иван",
+      surn: "иванов",
     };
   },
   methods: {
+    showUser: function () {
+      let user = this.cape(this.surn) + " " + this.cape(this.name);
+      alert(user);
+    },
+    cape: function (str) {
+      return str[0].toUpperCase() + str.slice(1);
+    },
     getThisDate: function () {
       alert(this.date);
     },
@@ -41,6 +50,8 @@ export default {
     <button @click="showTime">showTime</button>
     <br />
     <button @click="getThisDate">this.date</button>
+    <br />
+    <button @click="showUser">show user</button>
     <br />
   </div>
 </template>
