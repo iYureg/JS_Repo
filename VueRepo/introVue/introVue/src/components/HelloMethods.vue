@@ -1,8 +1,14 @@
 <script>
 export default {
-  data() {},
+  data() {
+    return {
+      date: new Date(),
+    };
+  },
   methods: {
-    now: () => new Date(),
+    getThisDate: function () {
+      alert(this.date);
+    },
     showDate: () => {
       let date = new Date();
       alert(date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate());
@@ -34,22 +40,7 @@ export default {
     <br />
     <button @click="showTime">showTime</button>
     <br />
-    Дата: {{ now().getFullYear() }}-{{
-      now().getMonth() < 10
-        ? "0" + (now().getMonth() + 1)
-        : now().getMonth() + 1
-    }}
-    -{{ now().getDate() < 10 ? "0" + now().getDate() : now().getDate() }}
+    <button @click="getThisDate">this.date</button>
     <br />
-    Время:
-    {{ now().getHours() < 10 ? "0" + now().getHours() : now().getHours() }}
-    :
-    {{
-      now().getMinutes() < 10 ? "0" + now().getMinutes() : now().getMinutes()
-    }}
-    :
-    {{
-      now().getSeconds() < 10 ? "0" + now().getSeconds() : now().getSeconds()
-    }}
   </div>
 </template>
