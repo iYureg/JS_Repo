@@ -4,6 +4,7 @@ import DataComp from "./components/DataComp.vue";
 import MyComponent from "./components/MyComponent.vue";
 import MathComp from "./components/MathComp.vue";
 import HelloMethods from "./components/HelloMethods.vue";
+import Reactivity from "./components/Reactivity.vue";
 </script>
 
 <template>
@@ -22,7 +23,7 @@ import HelloMethods from "./components/HelloMethods.vue";
   </header>
 
   <main>
-    <HelloMethods />
+    <Reactivity />
   </main>
 </template>
 
