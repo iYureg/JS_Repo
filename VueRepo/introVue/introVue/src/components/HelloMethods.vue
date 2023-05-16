@@ -8,6 +8,9 @@ export default {
     };
   },
   methods: {
+    showMessage: function (msg) {
+      alert(msg);
+    },
     showUser: function () {
       let user = this.cape(this.surn) + " " + this.cape(this.name);
       alert(user);
@@ -52,6 +55,8 @@ export default {
     <button @click="getThisDate">this.date</button>
     <br />
     <button @click="showUser">show user</button>
+    <br />
+    <button @click="showMessage('message')">showMessage</button>
     <br />
   </div>
 </template>
