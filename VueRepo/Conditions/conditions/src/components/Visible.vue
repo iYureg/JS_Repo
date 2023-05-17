@@ -21,6 +21,7 @@ export default {
 
 <template>
   <div class="visible">
+    <h3>--- Show/Hide text ---</h3>
     <p>
       Lorem, ipsum<span v-if="visible">
         dolor sit amet consectetur adipisicing elit. Expedita nam inventore eius
@@ -33,6 +34,9 @@ export default {
   </div>
 </template>
 <style>
+.visible {
+  text-align: center;
+}
 .showHide {
   font-size: 10px;
 }
