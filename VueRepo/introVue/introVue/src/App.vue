@@ -6,6 +6,7 @@ import MathComp from "./components/MathComp.vue";
 import HelloMethods from "./components/HelloMethods.vue";
 import Reactivity from "./components/Reactivity.vue";
 import Computed from "./components/Computed.vue";
+import EventModfication from "./components/EventModfication.vue";
 </script>
 
 <template>
@@ -26,6 +27,7 @@ import Computed from "./components/Computed.vue";
   <main>
     <Reactivity />
     <Computed />
+    <EventModfication />
   </main>
 </template>
 
